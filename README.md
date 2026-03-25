@@ -23,6 +23,7 @@ Este projeto foi construído para apresentar a identidade profissional de **Graz
 
 ```bash
 .
+├── .github/workflows/deploy.yml
 ├── index.html
 ├── package.json
 ├── src
@@ -55,16 +56,23 @@ npm run preview
 
 ## 🌐 Publicação
 
+### GitHub Pages (github.io)
+Este repositório já está preparado para GitHub Pages:
+
+- `vite.config.js` usa `base: '/portifolio/'` em produção.
+- O workflow `.github/workflows/deploy.yml` faz build e deploy automático.
+
+Passos no GitHub:
+1. Vá em **Settings → Pages**.
+2. Em **Build and deployment**, selecione **Source: GitHub Actions**.
+3. Faça push na branch `main` (ou `master`) e aguarde o workflow finalizar.
+4. O site ficará disponível em `https://grazipy.github.io/portifolio/`.
+
 ### Vercel
 1. Importe o repositório no painel da Vercel.
 2. Framework: **Vite**.
 3. Build command: `npm run build`.
 4. Output directory: `dist`.
-
-### GitHub Pages
-1. Ajuste `base` no `vite.config.js` para o nome do repositório (ex.: `/portifolio/`).
-2. Gere o build com `npm run build`.
-3. Publique o conteúdo de `dist/` via GitHub Actions ou branch `gh-pages`.
 
 ## ✍️ Manutenção de conteúdo
 
