@@ -1,0 +1,246 @@
+:root {
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #d9e5ff;
+  background: #050816;
+  line-height: 1.5;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: radial-gradient(circle at top right, #132a4a 0%, #050816 45%, #04030d 100%);
+  color: #d9e5ff;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  background: #fff;
+  color: #000;
+  padding: 0.5rem;
+  z-index: 2000;
+}
+
+.app-shell {
+  width: min(1200px, 92vw);
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  backdrop-filter: blur(10px);
+  background: rgba(5, 8, 22, 0.7);
+}
+
+.brand {
+  color: #f5f8ff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.topbar nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.topbar nav a,
+.contact-card a,
+.cta-group a {
+  color: #d9e5ff;
+  text-decoration: none;
+  border: 1px solid #365282;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
+.topbar nav a:hover,
+.contact-card a:hover,
+.cta-group a:hover {
+  border-color: #5de6d3;
+  color: #5de6d3;
+  transform: translateY(-1px);
+}
+
+.section {
+  margin-top: 4.5rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  min-height: 72vh;
+}
+
+.eyebrow,
+.section-title span {
+  color: #5de6d3;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+}
+
+.hero h1 {
+  margin-bottom: 0.5rem;
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  color: #f8fbff;
+}
+
+.role {
+  margin: 0;
+  color: #9db8df;
+  font-size: 1.1rem;
+}
+
+.headline {
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  margin: 1.2rem 0 2rem;
+  max-width: 60ch;
+}
+
+.cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.three-canvas {
+  width: 100%;
+  height: min(420px, 52vh);
+  border-radius: 18px;
+  border: 1px solid rgba(106, 146, 205, 0.4);
+  background: linear-gradient(145deg, rgba(17, 31, 58, 0.75), rgba(10, 13, 27, 0.55));
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.35);
+}
+
+.section-title h2 {
+  margin: 0.4rem 0;
+  font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+}
+
+.section-title p {
+  margin-top: 0;
+  color: #9db8df;
+  max-width: 78ch;
+}
+
+.about-text {
+  max-width: 82ch;
+  color: #c9daf7;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.tech-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.project-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card {
+  background: linear-gradient(170deg, rgba(21, 35, 66, 0.7), rgba(12, 17, 34, 0.85));
+  border: 1px solid rgba(105, 145, 200, 0.35);
+  border-radius: 16px;
+  padding: 1.2rem;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.badge-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.badge-list li {
+  font-size: 0.85rem;
+  border: 1px solid rgba(131, 175, 235, 0.5);
+  border-radius: 999px;
+  padding: 0.32rem 0.72rem;
+  color: #d9e5ff;
+}
+
+.project-bullets {
+  margin: 0.8rem 0;
+  padding-left: 1.2rem;
+  color: #bdd1f4;
+}
+
+.highlight {
+  color: #7be2d6;
+  font-size: 0.95rem;
+}
+
+.pillars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.pillar {
+  border: 1px solid rgba(98, 135, 189, 0.45);
+  background: rgba(10, 16, 33, 0.8);
+  padding: 0.6rem 0.95rem;
+  border-radius: 999px;
+}
+
+.contact-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.whatsapp-note {
+  width: 100%;
+  color: #9db8df;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    position: static;
+  }
+}
